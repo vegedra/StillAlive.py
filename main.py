@@ -82,6 +82,9 @@ def main():
         play_music('res/still_alive.mp3', volume=0.9)
         
         # Tela 1
+        blt.printf(69, 5, "Still Alive in Python")
+        blt.printf(71, 7, "By Pedro Ivo, 2024")
+        blt.refresh()
         sing('This was a triumph.', 2,5, 70)  # Quanto maior o numero no final, mais lento o texto
         blt.delay(2000)
         sing("I'm making a note here:", 2,6, 65)
@@ -116,18 +119,19 @@ def main():
         art('res/aperture.txt', 59, 18)
         sing("For the people who are", 2,22, 50)
         sing("still alive.", 2,23, 70)
-        blt.delay(3000)
+        blt.delay(2000)
         
         # Tela 2
         blt.clear_area(2, 1, 50, 30)
         sing('Forms FORM-55551-5:', 2,1, 20)  
         sing('Personnel File Addendum:', 2,2, 20)  
         
-        sing('Dear <<Subject Name Here>>,', 2,4, 30)  
+        sing('Dear <<Subject Name Here>>,', 2,4, 35)  
         sing("I'm not even angry.", 2,6, 70)  
-        sing("I'm being so sincere right now.", 2,7, 70)  
-        sing("Even though you broke my heart.", 2,8, 70)  
-        sing("And killed me.", 2,9, 70)  
+        blt.delay(2700)
+        sing("I'm being so sincere right now.", 2,7, 80)  
+        sing("Even though you broke my heart.", 2,8, 85)  
+        sing("And killed me.", 2,9, 80)  
         sing("And tore me to pieces.", 2,10, 70)  
         sing("And threw every piece into a fire.", 2,11, 70)  
         sing("As they burned it hurt because.", 2,12, 70)  
