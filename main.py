@@ -74,12 +74,12 @@ def main():
         blt.clear()
         art('res/frame.txt', 1, 0)
         
-        # Intro -- ta rodando lento no pc da faculdade, testa o outro main depois
+        # Intro -- ta rodando lento no pc da faculdade, nao sei oq fazer pra arrumar
         blt.delay(500)
         #sing('Forms FORM-29827281-12:', 2,1, 70)  
         #sing('Test Assessment Report', 2,2, 70)  
         #blt.delay(1500)
-        play_music('res/still_alive.wav', volume=0.9)
+        play_music('res/still_alive.mp3', volume=0.9)
         
         # Tela 1
         sing('This was a triumph.', 2,5, 70)  # Quanto maior o numero no final, mais lento o texto
@@ -119,6 +119,33 @@ def main():
         blt.delay(3000)
         
         # Tela 2
+        blt.clear_area(2, 1, 50, 30)
+        sing('Forms FORM-55551-5:', 2,1, 20)  
+        sing('Personnel File Addendum:', 2,2, 20)  
+        
+        sing('Dear <<Subject Name Here>>,', 2,4, 30)  
+        sing("I'm not even angry.", 2,6, 70)  
+        sing("I'm being so sincere right now.", 2,7, 70)  
+        sing("Even though you broke my heart.", 2,8, 70)  
+        sing("And killed me.", 2,9, 70)  
+        sing("And tore me to pieces.", 2,10, 70)  
+        sing("And threw every piece into a fire.", 2,11, 70)  
+        sing("As they burned it hurt because.", 2,12, 70)  
+        sing("I was so happy for you!", 2,13, 70)  
+        sing("Now these points of data", 2,14, 70)  
+        sing("make a beautiful line.", 2,15, 70)  
+        sing("And we're out of beta.", 2,16, 70)  
+        sing("We're releasing on time.", 2,17, 70)  
+        sing("So i'm GLaD. I got burned.", 2,18, 70)  
+        sing("Think of all the things we learned", 2,19, 70)  
+        sing("for the people who are", 2,20, 70)  
+        sing("still alive.", 2,21, 70)  
+        
+        # Tela 3
+        sing('Forms FORM-55551-6:', 2,1, 70)  
+        sing('Personnel File Addendum Addendum:', 2,2, 70) 
+        
+        sing("One last thing:", 2,4, 70)  
         
 if __name__ == "__main__": 
     main()
