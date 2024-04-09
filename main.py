@@ -92,7 +92,6 @@ def main():
         main()
       
       elif (key == blt.TK_1):
-        play_music('res/still_alive.mp3', volume=0.9)
         blt.clear_area(70, 10, 20, 5)
         #blt.clear()
         
@@ -100,6 +99,7 @@ def main():
         #sing('Forms FORM-29827281-12:', 2,1, 70)  
         #sing('Test Assessment Report', 2,2, 70)  
         #blt.delay(1500)
+        play_music('res/still_alive.mp3', volume=0.9)
 
         # Tela 1
         sing('This was a triumph.', 2, 5, 70)
@@ -152,8 +152,8 @@ def main():
         sing("And killed me.", 2,9, 80)  
         time.sleep(2)  
         sing("And tore me to pieces.", 2,10, 70)  
-        time.sleep(2)  
-        sing("And threw every piece into a fire.", 2,11, 80)  
+        time.sleep(1.8)  
+        sing("And threw every piece into a fire.", 2,11, 75)  
         time.sleep(1.6)  
         sing("As they burned it hurt because.", 2,12, 70)  
         sing("I was so happy for you!", 2,13, 70)  
@@ -163,19 +163,60 @@ def main():
         sing("And we're out of beta.", 2,16, 60)  
         sing("We're releasing on time.", 2,17, 60)  
         sing("So i'm GLaD. I got burned.", 2,18, 60)  
-        sing("Think of all the things we learned", 2,19, 60)  
-        sing("for the people who are", 2,20, 60)  
-        sing("still alive.", 2,21, 60)  
-        time.sleep(1)  
+        sing("Think of all the things we learned", 2,19, 38)  
+        sing("for the people who are", 2,20, 49)  
+        sing("still alive.", 2,21, 50)  
+        time.sleep(2)  
         
         # Tela 3
         blt.clear_area(2, 1, 50, 30)
         sing('Forms FORM-55551-6:', 2,1, 20)  
         sing('Personnel File Addendum Addendum:', 2,2, 20) 
         
-        sing("One last thing:", 2,4, 30)  
+        sing("One last thing:", 2,4, 40)  
+        
+        sing("Go ahead and leave me.", 2,6, 40)  
+        sing("I think I prefer to stay inside.", 2,7, 40)  
+        sing("Maybe you'll find someone else", 2,8, 40)  
+        sing("to help you.", 2,9, 40)  
+        sing("Maybe Black Mesa...", 2,10, 40)  
+        sing("THAT WAS A JOKE.", 2,11, 40)  
+        sing("FAT CHANCE.", 20,11, 40)  
+        sing("Anyway, this cake is great.", 2,12, 40) 
+        sing("It's so delicious and moist.", 2,13, 40) 
+        sing("Look at me still talking", 2,13, 40) 
+        sing("when there's Science to do.", 2,14, 40) 
+        sing("When I look out there,", 2,15, 40) 
+        sing("it makes me GLaD I'm not you.", 2,16, 40) 
+        sing("I've experiments to run.", 2,17, 40) 
+        sing("There is research to be done.", 2,18, 40) 
+        sing("On the people who are", 2,19, 40)
+        sing("still alive.", 2,20, 40)       
+
+        # Tela 4
+        blt.clear_area(2, 1, 50, 30)
+        sing("PS: And believe me I am", 2,4, 35)  
+        sing("still alive.", 2,5, 35)  
+        sing("PPS: I'm doing Science and I'm", 2,6, 35)  
+        sing("still alive.", 2,7, 35)  
+        sing("PPPS: I feel FANTASTIC and I'm", 2,8, 35)  
+        sing("still alive.", 2,9, 35)  
+        
+        sing("FINAL THOUGHT:", 2,11, 35)  
+        sing("While you're dying I'll be", 2,12, 35)  
+        sing("still alive.", 2,13, 35) 
+        
+        sing("FINAL THOUGHT PS:", 2,15, 35)  
+        sing("And when you're dead I will be", 2,16, 35)  
+        sing("still alive.", 2,17, 35) 
+        
+        sing("STILL ALIVE", 2,20, 30) 
+        
+        blt.clear_area(2, 1, 50, 30)
+        time.sleep(2)  
         
         blt.clear()
+        mixer.music.stop()
         main()
 
 if __name__ == "__main__":
