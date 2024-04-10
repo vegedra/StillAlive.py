@@ -61,6 +61,26 @@ def sing(text, x, y, tempo):
             key = blt.read()
             if key in (blt.TK_CLOSE, blt.TK_ESCAPE):
                 sys.exit()
+                
+            elif key == blt.TK_F4:
+                toggle_fullscreen()
+                
+# Para deixar em tela-cheia
+is_fullscreen = False
+def toggle_fullscreen():
+    # Função que deixa o jogo em tela-cheia
+    global is_fullscreen
+    is_fullscreen = not is_fullscreen
+
+    if is_fullscreen:
+        blt.set("window: fullscreen=true")
+        blt.refresh()
+        
+    else:
+        blt.set("window: fullscreen=false")
+        blt.refresh()
+
+    blt.delay(10)
 
 def main():
     blt.clear()
@@ -70,6 +90,8 @@ def main():
     art('res/frame.txt', 1, 0)
     blt.printf(69, 3, "Still Alive in Python")
     blt.printf(71, 5, "By Pedro Ivo, 2024")
+    blt.printf(62, 7, "Original game by VALVe Corporation")
+    blt.printf(67, 8, "Song by Jonathan Coulton")
     blt.refresh()
 
     # Main Loop
@@ -91,15 +113,16 @@ def main():
         blt.refresh()
         blt.delay(2000)
         main()
+        
+      elif key == blt.TK_F4:
+        toggle_fullscreen()
       
       elif (key == blt.TK_1):
         blt.clear_area(70, 10, 20, 5)
-        #blt.clear()
-        
-        #blt.delay(500)
-        #sing('Forms FORM-29827281-12:', 2,1, 70)  
-        #sing('Test Assessment Report', 2,2, 70)  
-        #blt.delay(1500)
+        blt.delay(500)
+        sing('Forms FORM-29827281-12:', 2,1, 70)  
+        sing('Test Assessment Report', 2,2, 70)  
+        blt.delay(1500)
         play_music('res/still_alive.mp3', volume=0.9)
 
         # Tela 1
@@ -150,21 +173,35 @@ def main():
         sing("I'm being so sincere right now.", 2,7, 80) 
         time.sleep(1.6)        
         sing("Even though you broke my heart.", 2,8, 85)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/heart.txt', 59, 18)
         sing("And killed me.", 2,9, 80)  
         time.sleep(2)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/boom.txt', 59, 18)
         sing("And tore me to pieces.", 2,10, 70)  
         time.sleep(1.8)  
         sing("And threw every piece into a fire.", 2,11, 75)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/fire.txt', 59, 18)
         time.sleep(1.6)  
         sing("As they burned it hurt because.", 2,12, 70)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/yes.txt', 59, 18)
         sing("I was so happy for you!", 2,13, 70)  
         time.sleep(0.5)  
         sing("Now these points of data", 2,14, 60)  
         sing("make a beautiful line.", 2,15, 60)  
         sing("And we're out of beta.", 2,16, 60)  
         sing("We're releasing on time.", 2,17, 60)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/boom.txt', 59, 18)
         sing("So i'm GLaD. I got burned.", 2,18, 60)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/science.txt', 59, 18)
         sing("Think of all the things we learned", 2,19, 38)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/aperture.txt', 59, 18)
         sing("for the people who are", 2,20, 49)  
         sing("still alive.", 2,21, 50)  
         time.sleep(2)  
@@ -183,47 +220,63 @@ def main():
         sing("Maybe you'll find someone else", 2,8, 60)  
         sing("to help you.", 2,9, 50)  
         time.sleep(3.5)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/blackmesa.txt', 59, 18)
         sing("Maybe Black Mesa...", 2,10, 60)  
-        time.sleep(2.2)  
+        time.sleep(2.1)  
         sing("THAT WAS A JOKE.", 2,11, 40) 
         time.sleep(1.4)          
         sing("FAT CHANCE.", 19,11, 40)  
         time.sleep(2)  
+        blt.clear_area(59, 18, 50, 20)
+        art('res/cake.txt', 59, 18)
         sing("Anyway, this cake is great.", 2,12, 65) 
         sing("It's so delicious and moist.", 2,13, 60) 
+        blt.clear_area(59, 18, 50, 20)
+        art('res/glados.txt', 59, 18)
         sing("Look at me still talking", 2,14, 50) 
+        blt.clear_area(59, 18, 50, 20)
+        art('res/nuclear.txt', 59, 18)
         sing("when there's Science to do.", 2,15, 50) 
+        blt.clear_area(59, 18, 50, 20)
+        art('res/aperture.txt', 59, 18)
         sing("When I look out there,", 2,16, 50) 
         sing("it makes me GLaD I'm not you.", 2,17, 50) 
+        blt.clear_area(59, 18, 50, 20)
+        art('res/science.txt', 59, 18)
         sing("I've experiments to run.", 2,18, 50) 
+        blt.clear_area(59, 18, 50, 20)
+        art('res/boom.txt', 59, 18)
         sing("There is research to be done.", 2,19, 50) 
+        blt.clear_area(59, 18, 50, 20)
+        art('res/aperture.txt', 59, 18)
         sing("On the people who are", 2,20, 50)
         sing("still alive.", 2,21, 50)  
         time.sleep(1)          
 
         # Tela 4
         blt.clear_area(2, 1, 50, 30)
-        sing("PS: And believe me I am", 2,4, 50)  
-        sing("still alive.", 2,5, 50)  
+        sing("PS: And believe me I am", 2,4, 45)  
+        sing("still alive.", 2,5, 45)  
         time.sleep(1)  
-        sing("PPS: I'm doing Science and I'm", 2,6, 50)  
-        sing("still alive.", 2,7, 50)  
-        time.sleep(1.2)  
-        sing("PPPS: I feel FANTASTIC and I'm", 2,8, 50)  
-        sing("still alive.", 2,9, 50)  
+        sing("PPS: I'm doing Science and I'm", 2,6, 45)  
+        sing("still alive.", 2,7, 45)  
+        time.sleep(0.8)  
+        sing("PPPS: I feel FANTASTIC and I'm", 2,8, 45)  
+        sing("still alive.", 2,9, 45)  
         
-        sing("FINAL THOUGHT:", 2,11, 50)  
-        sing("While you're dying I'll be", 2,12, 50)  
-        sing("still alive.", 2,13, 50) 
-        time.sleep(1)  
-        sing("FINAL THOUGHT PS:", 2,15, 50)  
-        sing("And when you're dead I will be", 2,16, 50)  
-        sing("still alive.", 2,17, 50) 
-        time.sleep(1)  
-        sing("STILL ALIVE", 2,20, 50) 
+        sing("FINAL THOUGHT:", 2,11, 20)  
+        sing("While you're dying I'll be", 2,12, 45)  
+        sing("still alive.", 2,13, 45) 
+        time.sleep(0.3)  
+        sing("FINAL THOUGHT PS:", 2,15, 20)  
+        sing("And when you're dead I will be", 2,16, 45)  
+        sing("still alive.", 2,17, 45) 
+        time.sleep(0.9)  
+        sing("STILL ALIVE", 2,20, 45) 
         
         blt.clear_area(2, 1, 50, 50)
-        time.sleep(2)  
+        time.sleep(4)  
         
         blt.clear()
         mixer.music.stop()
